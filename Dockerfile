@@ -11,11 +11,11 @@ ENV  M2=$M2_HOME/bin
 ENV  MAVEN_OPTS="-Xms256m -Xmx512m"
 ENV  PATH=$M2:$PATH
 
-
+RUN pwd
 #Variant 1) for OP demo on localhost
 RUN cd /csas && git clone https://github.com/hlisnikovsky/mitre-local
 RUN cd /csas/mitre-local && mvn clean install
-CMD cd /csas/mitre-local/openid-connect-server-webapp && mvn tomcat7:run
+CMD cd /csas/mitre-local && mvn tomcat7:run
 
 EXPOSE 8080 
 

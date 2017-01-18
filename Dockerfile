@@ -20,7 +20,7 @@ CMD cd /csas/mitre-local && mvn tomcat7:run
 EXPOSE 8080 
 
 
-#EXAMPLE of how to run this docker (openid_poc is name you can change): 
-# build: docker build -t openid_poc .
-# run:   docker run -it  -p 8080:8080 openid_poc 
+#EXAMPLE of how to run this docker (mitre-local is name you can change): 
+# build: docker build -t mitre-local .
+# run:   docker run -it -p 8080:8080 mitre-local:latest 
 #
